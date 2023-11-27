@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Data</title>
+    <style>
+        /* Added some basic CSS for table styling */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>All Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Invoice No</th>
+                <th>Manufacturer</th>
+                <th>Class</th>
+                <th>Sales in 1000s</th>
+                <th>resale value</th>
+                <th>Type</th>
+                <th>Price in 1000s</th>
+                <th>Engine Size</th>
+                <th>HP</th>
+                <th>Wheelbase</th>
+                <th>Width</th>
+                <th>Length</th>
+                <th>Curb width</th>
+                <th>Fuel capacity</th>
+                <th>Fuel economy</th>
+                <th>Launch</th>
+                <th>Power Perf Factor</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each data}}
+            <tr>
+                
+                <td>{{InvoiceNo}}</td>
+                <td>{{Manufacturer}}</td>
+                <td>{{class}}</td>
+                <td>{{Sales_in_thousands}}</td>
+                <td>{{__year_resale_value}}</td>
+                <td>{{Vehicle_type}}</td>
+                <td>{{Price_in_thousands}}</td>
+                <td>{{Engine_size}}</td>
+                <td>{{Horsepower}}</td>
+                <td>{{Wheelbase}}</td>
+                <td>{{Width}}</td>
+                <td>{{Length}}</td>
+                <td>{{Curb_weight}}</td>
+                <td>{{Fuel_capacity}}</td>
+                <td>{{Fuel_efficiency}}</td>   
+                <td>{{Latest_Launch}}</td>
+                <td>{{Power_perf_factor}}</td>            
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>
